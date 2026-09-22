@@ -1,0 +1,28 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    color: white;
+    
+
+}
+.about-container div{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.about-title{
+    font-size: 4em; 
+
+}
+
+.about-description{
+    margin-left: 10px;
+    max-width: 70ch;
+    word-spacing: 2px;
+    font-size: 1em;
+    font-family: 'Geist', sans-serif;
+}

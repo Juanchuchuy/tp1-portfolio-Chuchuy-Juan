@@ -1,10 +1,13 @@
 .hero-container{
 
-        min-height: 70vh;
-        justify-content: center;
+        gap: 2em;
+        min-height: 95vh;
         display: flex;
-
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
 
 }
 .profile{
@@ -14,13 +17,13 @@
     padding: 20px;
     align-items: center;
     justify-content: center;
-    gap: 15%;
+    gap: 25%;
 
 }
 .profile-title h2{ 
 
     color: aliceblue;
-    font-size: 5em;
+    font-size: 6em;
     font-weight: 700;
     background: linear-gradient(90deg, rgb(2, 105, 112), rgb(4, 191, 204), rgb(2, 105, 112));
     background-clip: text;
@@ -46,8 +49,8 @@
 }
 .profile-img img{
 
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
     border-radius: 100px 40px;
     object-fit: cover;
     border: 4px solid transparent;
@@ -68,6 +71,11 @@
   from, to { opacity: 1; }
   50% { opacity: 0; }
 }
+
+
+
+
+
 
 
 

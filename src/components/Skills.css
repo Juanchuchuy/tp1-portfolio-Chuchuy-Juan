@@ -1,0 +1,39 @@
+.skills-container {
+  overflow: hidden;
+  width: 70%;
+  margin-right: 15%;
+  align-self: self-end;
+}
+
+.skills-carrousel {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+.skill {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.skill i {
+    font-size: 2.5rem;
+    color: white;
+}
+.skill:hover{
+
+        color: white;
+
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

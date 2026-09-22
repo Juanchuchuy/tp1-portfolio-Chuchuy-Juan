@@ -2,16 +2,14 @@ import React from 'react'
 import './Header.css'
 const Header = () => {
   return (
-    <div>
         <nav>
             <ul className='menu-list'>
-                <li className='menu-item'>Home</li>
-                <li className='menu-item'>Projects</li>
-                <li className='menu-item'>About Me</li>
-                <li className='menu-item'>Contact</li>
+                <li className='menu-item'><strong>Home</strong><hr /> </li>
+                <li className='menu-item'><strong>Projects</strong><hr /> </li>
+                <li className='menu-item'><strong>About Me</strong><hr /> </li>
+                <li className='menu-item'><strong>Contact</strong><hr /> </li>
             </ul>
         </nav>   
-    </div>
   )
 }
 

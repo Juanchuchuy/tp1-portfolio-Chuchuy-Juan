@@ -1,7 +1,7 @@
 .hero-container{
 
         gap: 2em;
-        min-height: 95vh;
+        min-height: 98vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -11,7 +11,7 @@ const Projects = ({ title, items }) => {
 
   return (
     <>
-      <div className='projects-container'>
+      <div className='projects-container' id='projects'>
         <h2 className='title'><ArrowDown color='#9ee3f0' size={65} />{title}</h2>
         {
           items.map((project, index) => {

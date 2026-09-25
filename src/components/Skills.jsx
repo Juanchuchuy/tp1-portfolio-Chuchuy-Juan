@@ -5,7 +5,7 @@ const STATIC_CATEGORIES = ["Database"];
 
 export default function Skills({ title, stack }) {
   return (
-    <div className='skills'>
+    <div className='skills' id='skills'>
       <h2><ArrowDown color='#9ee3f0' size={65} />{title}</h2>
       <div className="skills-container">
         {Object.entries(stack).map(([category, items]) => {

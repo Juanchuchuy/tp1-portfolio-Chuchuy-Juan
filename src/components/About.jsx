@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react'
 
 const About = ({ title, paragraphs, buttonText }) => {
   return (
-    <div className='about-container'>
+    <div className='about-container' id='about'>  
       <div>
         <p className='about-title'>{title} </p><ArrowDown color='#9ee3f0' size={65} />
       </div>

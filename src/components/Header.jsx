@@ -6,8 +6,9 @@ const Header = ({ navItems, lang, onToggleLang }) => {
     <nav>
       <ul className='menu-list'>
         {navItems.map((item) => (
-          <li className='menu-item' key={item}>
-            <strong>{item}</strong><hr />
+          <li className='menu-item' key={item.id}>
+            <a href={`#${item.id}`}><strong>{item.label}</strong></a>
+            <hr />
           </li>
         ))}
       </ul>

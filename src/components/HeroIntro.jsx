@@ -17,7 +17,7 @@ const HeroIntro = ({ careers }) => {
   });
 
   return (
-    <div className='hero-container'>
+    <div className='hero-container' id='home'>
       <div className='profile'>
         <div className='profile-title'>
           <h2>Juan</h2>

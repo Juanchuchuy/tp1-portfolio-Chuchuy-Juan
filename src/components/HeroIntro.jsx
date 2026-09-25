@@ -3,7 +3,8 @@ import './HeroIntro.css'
 
 
 import { useTypewriter } from "typify-react";
-import {ChevronRight} from 'lucide-react'
+import {ChevronRight,Mail} from 'lucide-react'
+
 
 import profileImage from '../assets/profile-image.jpg'
 
@@ -28,9 +29,19 @@ const HeroIntro = () => {
 
               <div className='profile-career'><ChevronRight className='career-arrow' /> {career} <p className='cursor'>_</p></div>
             </div>
-            <div className='profile-img'>
+            <div className='aside'>
+                <div className='profile-img'>
                 <img src={profileImage} alt="Juan Chuchuy self image" />
+               
             </div>
+             <ul className='contact-list'>
+                      <i class="devicon-github-original"><strong>Github</strong></i>
+                      <i class="devicon-linkedin-plain"><strong>Linkedin</strong></i>
+                      <i class="devicon-facebook-plain"><strong>Facebook</strong></i>
+                      <i class="devicon-markdown-original"><strong>Mail</strong></i>
+            </ul>
+            </div>
+            
       </div>
       
     </div>

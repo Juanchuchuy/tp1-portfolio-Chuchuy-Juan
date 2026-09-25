@@ -14,7 +14,12 @@ import puntoLimpioIMG from './assets/projects-img/puntoLimpio.webp'
 
 const content = {
   en: {
-    nav: ['Home', 'Projects', 'About Me','Skills'],
+    nav: [
+      { id: 'home', label: 'Home' },
+      { id: 'about', label: 'About Me' },
+      { id: 'skills', label: 'Skills' },
+      { id: 'projects', label: 'Projects' },
+    ],
     hero: {
       careers: ['Software Developer', 'UX/UI Designer', 'Student From UTN'],
     },
@@ -30,7 +35,7 @@ const content = {
       button: 'Lets talk',
     },
     projects: {
-      title: 'My Projects',
+      title: 'Projects',
       items: [
         { projectName: 'Empresa Florida', projectDescription: 'Real-time schedule and route lookup for Empresa Florida, via web or the mobile app.', projectImage: floridaIMG },
         { projectName: 'Punto Limpio', projectDescription: 'Municipal waste management platform: interactive map of collection points and truck schedules by street.', projectImage: puntoLimpioIMG },
@@ -38,9 +43,20 @@ const content = {
       ],
     },
     skills: { title: 'Skills' },
+    footer: {
+      tagline: 'Building thoughtful, design-first web & mobile experiences.',
+      sectionsTitle: 'Sections',
+      contactTitle: 'Get in touch',
+      rights: 'All rights reserved.',
+    },
   },
   es: {
-    nav: ['Inicio', 'Proyectos', 'Sobre mí','Habilidades'],  
+    nav: [
+      { id: 'home', label: 'Inicio' },
+      { id: 'about', label: 'Sobre mí' },
+      { id: 'skills', label: 'Habilidades' },
+      { id: 'projects', label: 'Proyectos' },
+    ],
     hero: {
       careers: ['Desarrollador de Software', 'Diseñador UX/UI', 'Estudiante de UTN'],
     },
@@ -56,7 +72,7 @@ const content = {
       button: 'Hablemos',
     },
     projects: {
-      title: 'Mis Proyectos',
+      title: 'Proyectos',
       items: [
         { projectName: 'Empresa Florida', projectDescription: 'Consultor en tiempo real de los horarios y recorridos de la Empresa, vía web o la app móvil.', projectImage: floridaIMG },
         { projectName: 'Punto Limpio', projectDescription: 'Plataforma municipal de gestión de residuos: mapa interactivo de puntos de recolección y horarios de camiones por calle.', projectImage: puntoLimpioIMG },
@@ -64,6 +80,12 @@ const content = {
       ],
     },
     skills: { title: 'Habilidades' },
+    footer: {
+      tagline: 'Construyendo experiencias web y mobile pensadas desde el diseño.',
+      sectionsTitle: 'Secciones',
+      contactTitle: 'Contacto',
+      rights: 'Todos los derechos reservados.',
+    },
   },
 }
 
@@ -93,8 +115,16 @@ const STACK = {
   ],
 }
 
+// Reemplazá los href con tus perfiles/mail reales
+const SOCIAL_LINKS = [
+  { name: 'GitHub', href: 'https://github.com/Juanchuchuy', icon: 'devicon-github-original' },
+  { name: 'LinkedIn', href: '#', icon: 'devicon-linkedin-plain' },
+  { name: 'Facebook', href: '#', icon: 'devicon-facebook-plain' },
+]
+const CONTACT_EMAIL = 'juanignaciolinares2013@gmail.com'
+
 const App = () => {
-  const [lang, setLang] = useState('en') // único estado: 'en' | 'es'
+  const [lang, setLang] = useState('en') 
 
   const toggleLang = () => {
     setLang((prevLang) => (prevLang === 'en' ? 'es' : 'en'))
@@ -119,7 +149,15 @@ const App = () => {
         <Skills title={t.skills.title} stack={STACK} />
       </div>
       <Projects title={t.projects.title} items={t.projects.items} />
-      <Footer />
+      <Footer
+        navItems={t.nav}
+        socialLinks={SOCIAL_LINKS}
+        email={CONTACT_EMAIL}
+        tagline={t.footer.tagline}
+        sectionsTitle={t.footer.sectionsTitle}
+        contactTitle={t.footer.contactTitle}
+        rights={t.footer.rights}
+      />
     </div>
   )
 }

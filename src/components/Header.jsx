@@ -1,16 +1,29 @@
 import React from 'react'
 import './Header.css'
-const Header = () => {
+
+const Header = ({ navItems, lang, onToggleLang }) => {
   return (
-        <nav>
-            <ul className='menu-list'>
-                <li className='menu-item'><strong>Home</strong><hr /> </li>
-                <li className='menu-item'><strong>Projects</strong><hr /> </li>
-                <li className='menu-item'><strong>About Me</strong><hr /> </li>
-                <li className='menu-item'><strong>Contact</strong><hr /> </li>
-            </ul>
-            <button className='lenguage-btn'>En</button>
-        </nav>   
+    <nav>
+      <ul className='menu-list'>
+        {navItems.map((item) => (
+          <li className='menu-item' key={item}>
+            <strong>{item}</strong><hr />
+          </li>
+        ))}
+      </ul>
+
+      <button
+        type='button'
+        className={`lang-switch ${lang === 'es' ? 'lang-switch--es' : ''}`}
+        onClick={onToggleLang}
+        aria-label='Cambiar idioma'
+        aria-pressed={lang === 'es'}
+      >
+        <span className='lang-switch-option'>En</span>
+        <span className='lang-switch-option'>Es</span>
+        <span className='lang-switch-thumb'></span>
+      </button>
+    </nav>
   )
 }
 

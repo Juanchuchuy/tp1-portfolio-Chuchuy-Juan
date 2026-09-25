@@ -58,12 +58,12 @@
     z-index: 2;
 }
 
-.project-card-content  {
+.project-card-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;    
-    gap: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;    
+    gap: 1.5rem;
     height: 100%;
     position: relative;
     z-index: 3;
@@ -71,20 +71,32 @@
     color: white;
 }
 .project-title{
-
        background: linear-gradient(0deg, rgba(2, 105, 112, 0.623), rgba(4, 191, 204, 0.459), rgb(2, 105, 112));   
        padding: 8px;
        border-radius: 5px;
        font-size: 3em;
        cursor: pointer;
-
+       flex-shrink: 0;
+       transition: transform 0.3s ease;
+}
+.project-title:hover{
+       transform: translateY(-2px);
 }
 .project-description{
-
        font-size: large;
        text-align: start;  
        padding: 8px;
        border-radius: 5px;
-
+       max-width: 0;
+       max-height: 180px;
+       opacity: 0;
+       overflow: hidden;
+       white-space: nowrap;
+       transition: max-width 0.5s ease, opacity 0.3s ease 0.1s;
 }
-
+.project-description--open{
+       max-width: fit-content;
+       opacity: 1;
+       overflow-y: auto;
+       white-space: normal;
+}

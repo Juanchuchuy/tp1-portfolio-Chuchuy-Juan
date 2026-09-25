@@ -58,7 +58,11 @@
     padding: 15px 50px;
     border: none;
     outline: none;
+    font-weight: 600;
+    font-size: larger;
     border-radius: 5px;
+    background: linear-gradient(90deg, rgb(2, 105, 112), rgb(4, 191, 204));
+    color: white;
     cursor: pointer;
     align-self: center;
 

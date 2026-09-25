@@ -133,9 +133,40 @@
 }
 
 
+@media (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
 
+  .profile-title {
+    align-items: center;
+  }
 
+  .profile-title h2 {
+    font-size: 3.5em;
+  }
 
+  .aside {
+    flex-direction: column;
+  }
 
+  .profile-img img {
+    width: 220px;
+    height: 220px;
+  }
 
+  .contact-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
 
+@media (max-width: 480px) {
+  .profile-title h2 {
+    font-size: 2.5em;
+  }
+}

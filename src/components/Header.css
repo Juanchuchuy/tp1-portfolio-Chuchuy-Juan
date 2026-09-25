@@ -114,3 +114,15 @@ nav{
 .lang-switch--es .lang-switch-thumb {
   transform: translateX(100%);
 }
+
+
+@media (max-width: 600px) {
+  .menu-list {
+    gap: 10px;
+    padding: 8px 12px;
+  }
+
+  .menu-item strong {
+    font-size: 0.8em;
+  }
+}

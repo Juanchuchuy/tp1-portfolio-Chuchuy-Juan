@@ -5,3 +5,10 @@
     justify-content: center;
 
 }
+
+@media (max-width: 900px) {
+  .introduction-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,38 +1,125 @@
-.skills-container {
-  overflow: hidden;
-  margin: 0 auto;
+.skills{
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  width: 80%;
+
+
+}
+.skills h2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-size: 4em; 
+  align-self: flex-end;
   width: 50%;
+
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  padding: 2rem 2rem;
+}
+
+/* ---------- Card ---------- */
+.skill-card {
+  position: relative;
+  padding: 2rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(255, 255, 255, 0.432);
+  transform: translateY(-2px);
+}
+
+.skill-card-title {
+  color: white;
+  margin: 0 0 3rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
 }
 
 .skills-carrousel {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.skills-track {
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
   width: max-content;
-  animation: scroll 15s linear infinite;
+  animation: scroll 25s linear infinite;
+}
+
+.skills-carrousel:hover .skills-track {
+  animation-play-state: paused;
+}
+.skills-static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+  min-height: 64px; 
 }
 
 .skill {
-  flex: 0 0 auto;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  min-width: 60px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  opacity: 1;
+  transform: translateY(-4px);
 }
 
 .skill i {
-    font-size: 2.5rem;
-    color: white;
-}
-.skill:hover{
-
-        color: white;
-
+  font-size: 2rem;
 }
 
+.skill span {
+  font-size: 0.7rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+/* ---------- Animación ---------- */
 @keyframes scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-33.333%); }
+}
+
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill i {
+    font-size: 1.75rem;
+  }
 }

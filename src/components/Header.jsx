@@ -9,6 +9,7 @@ const Header = () => {
                 <li className='menu-item'><strong>About Me</strong><hr /> </li>
                 <li className='menu-item'><strong>Contact</strong><hr /> </li>
             </ul>
+            <button className='lenguage-btn'>En</button>
         </nav>   
   )
 }

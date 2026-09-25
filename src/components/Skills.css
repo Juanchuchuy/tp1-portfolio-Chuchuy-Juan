@@ -30,7 +30,6 @@
   padding: 2rem 2rem;
 }
 
-/* ---------- Card ---------- */
 .skill-card {
   position: relative;
   padding: 2rem 1.25rem;
@@ -110,7 +109,6 @@
 }
 
 
-/* ---------- Animación ---------- */
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-33.333%); }
@@ -118,7 +116,6 @@
 
 
 
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: 1fr;

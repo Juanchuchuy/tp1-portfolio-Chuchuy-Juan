@@ -115,7 +115,7 @@ const STACK = {
   ],
 }
 
-// Reemplazá los href con tus perfiles/mail reales
+
 const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/Juanchuchuy', icon: 'devicon-github-original' },
   { name: 'LinkedIn', href: '#', icon: 'devicon-linkedin-plain' },

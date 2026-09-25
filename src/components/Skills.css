@@ -1,8 +1,7 @@
 .skills-container {
   overflow: hidden;
-  width: 70%;
-  margin-right: 15%;
-  align-self: self-end;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .skills-carrousel {

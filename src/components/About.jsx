@@ -6,9 +6,9 @@ const About = () => {
   return (
     <div className='about-container'>
         <div>
-            <p className='about-title'>About Me </p><ArrowDown color='#9ee3f0' size={65}/>
+            <ArrowDown color='#9ee3f0' size={65}/><p className='about-title'>About Me </p>
         </div>
-        <p className='about-description'>Hi, I'm Juan, a student at Universidad Tecnológica Nacional in Tucumán. I've been a technology enthusiast since I was a kid, and today I specialize in SaaS with a focus on UX/UI design.<br /></p>
+        <p className='about-description'>Hi, I'm Juan, a Software developer. I've been a technology enthusiast since I was a kid, and today I specialize in SaaS with a focus on UX/UI design.<br />Im currently living in Tucumán Argentina studying at Universidad Tecnologica Nacional - FRT </p>
     </div>
   )
 }

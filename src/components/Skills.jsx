@@ -1,4 +1,4 @@
-import './Skills.css'
+import '../components/Skills.css'
 const LANGS = [
   { name: "JavaScript", icon: "devicon-javascript-plain colored" },
   { name: "PHP", icon: "devicon-php-plain colored" },

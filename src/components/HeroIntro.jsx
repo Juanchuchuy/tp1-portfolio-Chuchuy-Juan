@@ -1,7 +1,6 @@
 import React from 'react'
 import './HeroIntro.css'
-import About from './About';
-import Skills from './Skills';
+
 
 import { useTypewriter } from "typify-react";
 import {ChevronRight} from 'lucide-react'
@@ -33,8 +32,7 @@ const HeroIntro = () => {
                 <img src={profileImage} alt="Juan Chuchuy self image" />
             </div>
       </div>
-      <Skills />
-      <About />
+      
     </div>
   )
 }
